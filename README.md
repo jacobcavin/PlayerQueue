@@ -1,4 +1,4 @@
-# Player Queue
+# PlayerQueue
 Using the MediaPlayer framework, you can do some great things with the system's music player like playing music, getting song information, and more. You can also append, prepend, and set the system music player's queue which is great in theory, but in reality can be very difficult to use, especially for beginners.
  
 Thankfully, I've figured out how to use the complicated system queue system so you don't have to. Let's shut up and get straight to the code.
