@@ -3,11 +3,11 @@ Using the MediaPlayer framework, you can do some great things with the system's 
  
 Thankfully, I've figured out how to use the complicated system queue system so you don't have to. Let's shut up and get straight to the code.
 
-##Download the Class
+## Download the Class
 I've created a very easy-to-use class called `PlayerQueue` to control the Apple Music Queue. You can download it, here.
 
 
-##Setting Up
+## Setting Up
 Download the class as mentioned above, add it to your Xcode project, and then use the `PlayerQueue` wherever you'd like. In this example, we're going to use a `UIViewController`. Just create an instance of the class, and now you're ready to use it!
 ```
 class MainController: UIViewController {
@@ -17,7 +17,7 @@ class MainController: UIViewController {
 }
 ```
 
-##Getting the Catalog IDs
+## Getting the Catalog IDs
 There are three ids when using Apple Music, we have the Catalog ID, Store ID, and Library ID. Although, Catalog IDs and Store IDs are the same things, just called different things throughout Apple's frameworks and APIs. In this tutorial, we'll call them Catalog IDs. In addition to this, for this tutorial, we'll be focusing on Catalog/Store IDs although I plan on extending my class for Library IDs in the future. You can get the Catalog ID(s) one of two ways:
 
 **Apple Music API:** You can get the Catalog IDs by making requests to the [Apple Music API](https://developer.apple.com/documentation/applemusicapi/). For the simplicity of this tutorial, we won't get into all of that however there are many tutorials teaching how to use the API. 
@@ -42,7 +42,7 @@ let id = "1547316386"
 ```
 Now, let's get to actually using PlayerQueue.
 
-##Prepend to Queue
+## Prepend to Queue
 This adds song(s) to the beginning of the queue. You can either prepend an array of catalog ids
 ```
 playerQueue.prepend(ids: idArray)
@@ -52,7 +52,7 @@ playerQueue.prepend(ids: idArray)
 playerQueue.prepend(id: id)
 ```
 
-##Append to Queue
+## Append to Queue
 This adds song(s) to the end of the queue. Just like prepend, you can either append an array of catalog ids
 ```
 playerQueue.append(ids: idArray)
@@ -62,19 +62,19 @@ playerQueue.append(ids: idArray)
 playerQueue.append(id: id)
 ```
 
-##Set the Queue
+## Set the Queue
 This removes any songs that were in the queue and replaces them with your new songs
 ```
 playerQueue.setQueue(ids: idArray)
 ```
 
-##Play All
+## Play All
 This plays all the songs in an array of ids. Staring with the first and prepending the rest to the queue.
 ```
 playerQueue.playAll(ids: idArray)
 ```
 
-##Shuffle All
+## Shuffle All
 This shuffles all the songs in an array of song ids. Staring with the first and prepending the rest to the queue
 ```
 playerQueue.shuffleAll(ids: idArray)
